@@ -22,6 +22,7 @@ void printArea(struct Rect rec){
 void changeLen(struct Rect *r,int x){
     r->length=x;
 }
+
 // And the Main function
 int main(){
     struct Rect r;
