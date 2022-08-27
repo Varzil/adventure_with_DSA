@@ -12,4 +12,5 @@ void fun(int n){
 }
 int main(void ){
     fun(3);
+    //This will crate n+1 number of spaces
 }
