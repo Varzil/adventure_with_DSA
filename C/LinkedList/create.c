@@ -1,14 +1,12 @@
 //
-// Created by Varzil Thakkar on 08/09/22.
+// Created by Varzil Thakkar on 10/09/22.
 //
 #include "stdlib.h"
-#include "stdio.h"
 struct node{
     int val;
     struct node *next;
-}*first=NULL;
-
-void create(int arr[],int n){
+}*first = NULL;
+struct node* create(int arr[],int n){
     struct node *t,*last;
     first=(struct node *)malloc(sizeof(struct node));
     first->val=arr[0];
@@ -21,17 +19,5 @@ void create(int arr[],int n){
         last->next=t;
         last=t;
     }
-}
-
-void display(struct node *p){
-    while (p!=NULL){
-        printf("%d ->",p->val);
-        p=p->next;
-    }
-    printf("%d ->",p->val); // For last node
-}
-int main(void){
-    int a[]={0,1,2,3};
-    create(a,4);
-    display(first);
+    return first;
 }
