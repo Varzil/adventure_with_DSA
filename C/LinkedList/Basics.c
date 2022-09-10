@@ -28,6 +28,7 @@ void display(struct node *p){
         printf("%d ->",p->val);
         p=p->next;
     }
+    printf("NULL");
 }
 
 int main(void){
