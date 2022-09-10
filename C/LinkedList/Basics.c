@@ -8,7 +8,7 @@ struct node{
     struct node *next;
 }*first=NULL;
 
-void create(int arr[],int n){
+void create(const int arr[],int n){
     struct node *t,*last;
     first=(struct node *)malloc(sizeof(struct node));
     first->val=arr[0];
@@ -30,6 +30,7 @@ void display(struct node *p){
     }
     printf("%d ->",p->val); // For last node
 }
+
 int main(void){
     int a[]={0,1,2,3};
     create(a,4);
