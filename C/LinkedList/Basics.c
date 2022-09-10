@@ -28,7 +28,6 @@ void display(struct node *p){
         printf("%d ->",p->val);
         p=p->next;
     }
-    printf("%d ->",p->val); // For last node
 }
 
 int main(void){
