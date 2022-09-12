@@ -11,12 +11,14 @@ struct node{
 void display(struct node *p);
 void makeLL(int a[],int n);
 int count(struct node *p);
+int sum(struct node *p);
 
 int main(void ){
     int a[]={1,2,3,4};
     makeLL(a,4);
     printf("%d\n",count(first)-1);
     display(first);
+    printf("\n%d",sum(first));
 }
 void makeLL(int a[],int n){
     struct node *t,*last;
@@ -39,6 +41,14 @@ int count(struct node *p){
         p=p->next;
     }
     return cnt;
+}
+int sum(struct node *p){
+    int sum=0;
+    while(p){
+        sum=sum+p->data;
+        p=p->next;
+    }
+    return sum;
 }
 void display(struct node *p){
     while (p!=NULL){
