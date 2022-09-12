@@ -10,10 +10,13 @@ struct node{
 
 void display(struct node *p);
 void makeLL(int a[],int n);
+int count(struct node *p);
 
 int main(void ){
     int a[]={1,2,3,4};
     makeLL(a,4);
+    printf("%d\n",count(first)-1);
+    display(first);
 }
 void makeLL(int a[],int n){
     struct node *t,*last;
@@ -28,6 +31,14 @@ void makeLL(int a[],int n){
         last->next=t;
         last=t;
     }
+}
+int count(struct node *p){
+    int cnt;
+    while(p){
+        cnt++;
+        p=p->next;
+    }
+    return cnt;
 }
 void display(struct node *p){
     while (p!=NULL){
