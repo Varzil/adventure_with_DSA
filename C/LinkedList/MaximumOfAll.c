@@ -9,18 +9,18 @@ struct node{
     struct node *next;
 }*first;
 
-void create(const int a[],int n);
+void create(int a[],int n);
 int max(struct node *p);
 void display(struct node *p);
 
 int main(void){
-    int ae={0,2,4,6,2,4,5};
-    create(ae,7);
+    int ae[]={0,4,6,2,4,5};
+    create(ae,6);
     display(first);
-    printf("Max is %d", max(first));
+    printf("\nMax is %d", max(first));
 }
 
-void create(const int arr[],int n){
+void create(int arr[],int n){
     struct node *t,*last;
     first=(struct node *)malloc(sizeof(struct node));
     first->data=arr[0];
@@ -41,12 +41,12 @@ void display(struct node *p){
     }
     printf("NULL");
 }
+
 int max(struct node *p){
     int max=INT32_MIN;
     while(p){
-        if(p->data>max){
+        if(p->data > max)
             max=p->data;
-        }
         p=p->next;
     }
     return max;
