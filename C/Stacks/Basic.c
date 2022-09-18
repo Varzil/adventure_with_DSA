@@ -8,26 +8,28 @@ struct Stack{
     int top;
     int *s;
 };
+
 void create(struct Stack *st){
     printf("Enter Size : ");
     scanf("%d",&st->size);
     st->top=-1;
     st->s=(int *)malloc((st->size)*sizeof(int)); // Creating Array of size
-};
-int isEmpty(struct Stack *st){
-    if((st->top==-1))
+}
+
+int isEmpty(struct Stack st){
+    if(st.top==-1)
         return 1;
     return 0;
 }
 
-int isFull(struct Stack *st){
-    if((st->top== st->size-1))
+int isFull(struct Stack st){
+    if(st.top== st.size-1)
         return 1;
     return 0;
 }
 
 void push(struct Stack *st,int x){
-    if(isFull(&st)==0){
+    if(st->top != st->size-1){
         st->top++;
         st->s[st->top]=x;
         printf("%d Added SuccessFully\n",st->s[st->top]);
