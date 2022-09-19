@@ -3,6 +3,7 @@
 //
 #include "stdio.h"
 #include "stdlib.h"
+
 struct Stack{
     int size;
     int top;
@@ -62,25 +63,27 @@ int main(void ){
     printf("Enter your choice\n Press 1 to push \n Press 2 to pop \n Press 3 to display \n Press 4 to Quit\n");
     int option,a;
     scanf("%d",&option);
-    while (1){
-        switch (option) {
-            case 1:
-                printf("What element to be added?\n");
-                scanf("%d",a);
-                push(&stack,a);
-                break;
-            case 2:
-                printf("%d popped",pop(&stack));
-                break;
-            case 3:
-                display(&stack);
-                break;
-            case 4:
-                exit(0);
-            default:
-                printf("Sahi option dalo");
-                break;
-        }
-    }
+
+//    while (1){
+//        switch (option) {
+//            case 1:
+//                printf("What element to be added?\n");
+//                scanf("%d",a);
+//                push(&stack,a);
+//                break;
+//            case 2:
+//                printf("%d popped",pop(&stack));
+//                break;
+//            case 3:
+//                display(&stack);
+//                break;
+//            case 4:
+//                exit(0);
+//            default:
+//                printf("Sahi option dalo");
+//                break;
+//        }
+//    }
+
 
 }
