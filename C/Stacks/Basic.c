@@ -34,24 +34,53 @@ void push(struct Stack *st,int x){
         st->s[st->top]=x;
         printf("%d Added SuccessFully\n",st->s[st->top]);
     } else{
-        printf("Stack Full\n");
+        printf("Stack Overflow\n");
+        exit(0);
     }
+}
+
+int pop(struct Stack *st){
+    int x=-1;
+    if(st->top==-1){
+        printf("Stack Underflow\n");
+    } else{
+        x=st->s[st->top--];
+    }
+    return x;
+}
+
+void display(struct Stack *st){
+    printf("Currently in stack : \n");
+    for(int i = st->top; i>=0 ; i--)
+        printf("%d ",st->s[i]);
+    printf("\n");
 }
 
 int main(void ){
     struct Stack *stack ;
     create(&stack);
+    printf("Enter your choice\n Press 1 to push \n Press 2 to pop \n Press 3 to display \n Press 4 to Quit\n");
+    int option,a;
+    scanf("%d",&option);
+    while (1){
+        switch (option) {
+            case 1:
+                printf("What element to be added?\n");
+                scanf("%d",a);
+                push(&stack,a);
+                break;
+            case 2:
+                printf("%d popped",pop(&stack));
+                break;
+            case 3:
+                display(&stack);
+                break;
+            case 4:
+                exit(0);
+            default:
+                printf("Sahi option dalo");
+                break;
+        }
+    }
 
-//    if(isEmpty(&stack)==1){
-//        printf("\nEmpty");
-//    } else{
-//        printf("\nNot Empty");
-//    }
-//    if(isFull(&stack)==1){
-//        printf("\nFull");
-//    } else{
-//        printf("\nNot Full");
-//    }
-
-    push(&stack,1);
 }
