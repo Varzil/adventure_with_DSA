@@ -1,6 +1,7 @@
 //
 // Created by Varzil Thakkar on 30/08/22.
 //
+
 #include "stdio.h"
 #include "stdlib.h"
 
@@ -64,6 +65,7 @@ int main(void ){
     int option,a;
     scanf("%d",&option);
 
+
 //    while (1){
 //        switch (option) {
 //            case 1:
@@ -84,6 +86,5 @@ int main(void ){
 //                break;
 //        }
 //    }
-
 
 }
