@@ -1,6 +1,7 @@
 //
 // Created by Varzil Thakkar on 22/09/22.
 //
+
 #include "stdio.h"
 #include "stdlib.h"
 struct Queue{
@@ -29,6 +30,8 @@ void enqueue(struct Queue *q,int x){
 }
 void delete(struct Queue *q){
     if(q->front==q->rear){
+        // This line will make both pointers back to -1 and hence make space for the new elements
+        q->front=q->rear=-1;
         printf("The queue is Empty\n");
     }
     q->front++;
@@ -45,33 +48,6 @@ void display(struct Queue *q){
 int main(void){
     struct Queue *queue;
     int x;
-//    while (1){
-//        printf("Enter your choice\n");
-//        scanf("%d",&x);
-//        switch (x) {
-//            case 1:
-//                create(&queue);
-//                break;
-//            case 2:
-//                printf("Enter the number to be added\n");
-//                int n;
-//                scanf("%d\n",&n);
-//                enqueue(&queue,n);
-//                break;
-//            case 3:
-//                delete(&queue);
-//                break;
-//            case 4:
-//                display(&queue);
-//                break;
-//            case 5:
-//                exit(0);
-//                break;
-//            default:
-//                printf("Enter realValues");
-//                break;
-//        }
-//    }
     create(&queue);
     enqueue(&queue,3);
     delete(&queue);
