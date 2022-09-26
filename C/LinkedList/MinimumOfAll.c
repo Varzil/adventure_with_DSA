@@ -1,6 +1,7 @@
 //
 // Created by Varzil Thakkar on 13/09/22.
 //
+
 #include "stdlib.h"
 #include "stdio.h"
 
@@ -34,6 +35,7 @@ void create(int arr[],int n){
         last=t;
     }
 }
+
 void display(struct node *p){
     while (p!=NULL){
         printf("%d ->",p->data);
