@@ -1,6 +1,7 @@
 //
 // Created by Varzil Thakkar on 12/08/22.
 //
+
 #include "stdio.h"
 void swap(int *a,int *b){
     int temp;
@@ -8,6 +9,7 @@ void swap(int *a,int *b){
     *a=*b;
     *b=temp;
 }
+
 int main(void){
     int x,y;
     printf("Enter values of x and y \n");

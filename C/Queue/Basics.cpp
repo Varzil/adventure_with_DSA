@@ -77,7 +77,6 @@ void Queue::display() {
 }
 
 int main() {
-
     int A[] = {1, 3, 5, 7, 9};
 
     Queue q(sizeof(A)/sizeof(A[0]));
