@@ -29,7 +29,7 @@ In simple words, the node which has a branch from it to any other node is called
 
 In a tree data structure, the node which is descendant of any node is called as CHILD Node. In simple words, the node which has a link from its parent node is called as child node. In a tree, any parent node can have any number of child nodes. In a tree, all the nodes except root are child nodes.
 
-### Sibling :
+### Siblings :
 
 In a tree data structure, nodes which belong to same Parent are called as SIBLINGS. In simple words, the nodes with the same parent are called Sibling nodes.
 
