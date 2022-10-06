@@ -13,3 +13,8 @@ A linked list is a linear data structure that includes a series of connected nod
 
 ![](../../Assets/474px-CPT-LinkedLists-addingnode.svg.png)
 
+### Functions on LinkedList :-
+
+1. Searching 
+2. Adding element
+3. Removing element
