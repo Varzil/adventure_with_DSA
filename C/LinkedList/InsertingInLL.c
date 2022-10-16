@@ -35,7 +35,9 @@ void display(struct node *p){
 void insert(int arr[],int n,int idx){
     struct node *p,*q;
     for (int i=0;i<idx;i++){
-
+        // Code for inserting element in LL
+        // point the pointer of the node at index's next to the new node
+        // and the new node's next to the index+1's node
     }
 }
 
