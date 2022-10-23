@@ -47,3 +47,7 @@ In a tree data structure, the node which has atleast one child is called as INTE
 ### Levels
 
 In a tree data structure, the root node is said to be at Level 0 and the children of root node are at Level 1 and the children of the nodes which are at Level 1 will be at Level 2 and so on... In simple words, in a tree each step from top to bottom is called as a Level and the Level count starts with '0' and incremented by one at each level (Step).
+
+### Strict binary Tree
+
+A tree having either 0 or 2 child nodes and not 1 is called a strict binary tree
