@@ -1,4 +1,3 @@
-#include<stdlib.h>
 #include<stdio.h>
 int main(){
     int n;
@@ -39,14 +38,13 @@ int main(){
             wt[minIndex]=tat[minIndex]-btcopy[minIndex];
         }
         timeElapsed++;
-
     }
     float avgwt = 0, avgtat = 0;
-    printf("Process\tBurst Time\tWaiting Time\tTurn Around Time");
+    printf("Process\tB.T\tW.T\tT.A.T");
     printf("\n");
     for (int i = 0; i < n; i++)
     {
-        printf("%d\t%d\t\t%d\t\t%d\n", p[i], btcopy[i], wt[i], tat[i]);
+        printf("%d\t\t%d\t%d\t%d\n", p[i], btcopy[i], wt[i], tat[i]);
         avgwt += wt[i];
         avgtat += tat[i];
     }
